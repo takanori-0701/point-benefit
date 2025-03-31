@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.point-gift {
+
+}
+
+.point-gift__tytle {
+    text-align: center;
+}
+
+.comon-title--gift {
+    position: relative;
+}
+
+.point-gift__text {
+    font-size: rem(20);
+    margin-top: rem(60);
+    text-align: center;
+}
+
+.point-gift__subtext {
+    font-size: rem(16);
+}
+
+.point-gift__btn-wrap {
+    margin-top: rem(65);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20);
+    
+}
+
+.point-gift__btn-wrap:nth-child(even) {
+    text-align: left;
+}
+.point-gift__btn-wrap:nth-child(odd) {
+    text-align: right;
+}
+.common-btn {
+
+}
+
+
+
+.common-btn {
+
+}
+

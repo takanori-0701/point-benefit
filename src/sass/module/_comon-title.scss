@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.comon-title {
+    font-size: rem(35);
+    color: $tytle;
+    font-weight: $bold;
+}
+
+.comon-title--gift {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(15);
+    font-size: rem(35);
+    color: $tytle;
+    font-weight: $bold;
+    position: relative;
+}
+
+.comon-title--gift::before {
+        content: "";
+        width: rem(146); 
+        height: rem(102);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/common/1.webp");
+}
+.comon-title--gift::after {
+    content: "";
+    width: rem(96); 
+    height: rem(96);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/common/2.webp");
+}

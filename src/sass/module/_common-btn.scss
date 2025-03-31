@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.common-btn {
+    position: relative;
+    display: inline-block;
+    font-size: rem(18);
+    font-weight: $bold;
+    padding: rem(19) 0;
+    width: rem(340);
+    border: 1px solid #603813;
+    border-radius: 8px;
+    background: $bak;
+    color: #603813;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.common-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(20);
+    width: rem(11);
+    height: rem(11);
+    border-top: rem(1.5) solid #603813;
+    border-right: rem(1.5) solid #603813;
+    transform: translateY(-80%) rotate(135deg);
+}
+
+.common-btn:hover {
+    opacity: 0.7;
+}
+
+.common-btn--mainvisual {
+    background-color: $red;
+    color: $white;
+}
+
+.common-btn--mainvisual {
+    background-color: $red;
+    color: $white;
+    border: 1px solid $red;
+}
+.common-btn--mainvisual::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rem(20);
+    width: rem(11);
+    height: rem(11);
+    border-top: rem(1.5) solid $white;
+    border-right: rem(1.5) solid $white;
+    transform: translateY(-80%) rotate(135deg);
+}

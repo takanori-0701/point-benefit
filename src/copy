@@ -1,0 +1,54 @@
+HM
+22:27
+class Accordion {
+	constructor(elm, summary, answer) {
+		this.DOM = {};
+		this.DOM.elm = elm;
+		this.summary = this.DOM.elm.querySelectorAll(summary);
+		this.answer = this.DOM.elm.querySelector(answer);
+
+		this.animTiming = {
+			duration: 300,
+			easing: "ease-in-out",
+		};
+
+		this.init();
+	}
+
+	closingAnimation(height) {
+		return [
+			{
+				height: height.scrollHeight + "px",
+				opacity: 1,
+			},
+			{
+				height: 0,
+				opacity: 0,
+			},
+		];
+	}
+
+	openingAnimation(height) {
+		return [
+			{
+document.querySelectorAll(".p-cam__accordion").forEach((elm) => {
+	new Accordion(elm, ".p-cam__summary", ".p-cam__container");
+});
+HM
+22:29
+<details class="p-cam__accordion">
+              <summary class="p-cam__summary">
+                <span class="p-cam__Q-text">応募上のご注意</span>
+                <span class="p-cam__toggle-icon" aria-hidden="true">
+                  <img width="14" height="10" loading="lazy" decoding="async" src="./assets/images/traiangle-BxcwR_wB.png" />
+                </span>
+              </summary>
+              <div class="p-cam__container">
+                <div class="p-cam__A-box">
+                  <p class="p-cam__A-text">
+                    お申込み頂いた方は、<br />
+                    応募上の注意事項をご確認ください。
+                  </p>
+                </div>
+              </div>
+            </details>  

@@ -1,0 +1,158 @@
+@use "global" as *;
+
+.pointget {
+    padding: rem(75) 0;
+    background-color: #F2F2F2;
+}
+
+.pointget__title {
+    text-align: center;
+}
+
+/* ポイントカードのコンテナ */
+.pointget__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* 子要素の高さを揃える */
+    position: relative;
+    margin-top: rem(67);
+}
+
+/* 各ポイントカード */
+.pointget-card {
+    background-color: #fff;
+    width: 30%;
+    padding: 30px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pointget-card__title {
+    color: #8B5A2B;
+    font-size: rem(19);
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pointget-card__image {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.pointget-card__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1; /* テキストエリアを伸ばして高さを調整 */
+}
+
+/* LINEボタン */
+.line-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00B900;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: auto; /* 下部に配置 */
+    transition: background-color 0.3s;
+}
+
+.line-button:hover {
+    background-color: #009900;
+}
+
+.line-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* 矢印の疑似要素 */
+.pointget__cards::before,
+.pointget__cards::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #aaa;
+    border-right: 2px solid #aaa;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 1;
+}
+
+/* 矢印の位置調整 */
+.pointget__cards::before {
+    left: 30%;
+}
+
+.pointget__cards::after {
+    left: 65%;
+}
+
+.pointget__cards .arrow-line-1 {
+    left: 31%;
+    width: 5%;
+}
+
+.pointget__cards .arrow-line-2 {
+    left: 64%;
+    width: 5%;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .pointget__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pointget-card {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 50px;
+    }
+    
+    /* スマホ表示時の矢印 - 縦方向に変更 */
+    .pointget__cards::before,
+    .pointget__cards::after {
+        left: 50%;
+        transform: translateX(-50%) rotate(135deg);
+        top: auto;
+    }
+    
+    .pointget__cards::before {
+        top: 30%;
+    }
+    
+    .pointget__cards::after {
+        top: 66%;
+    }
+    
+    /* スマホ表示時の矢印の棒部分 */
+    .pointget__cards .arrow-line-1,
+    .pointget__cards .arrow-line-2 {
+        left: 50%;
+        width: 2px;
+        height: 30px;
+        transform: translateX(-50%);
+        top: auto;
+    }
+    
+    .pointget__cards .arrow-line-1 {
+        top: 28%;
+        height: 40px;
+    }
+    
+    .pointget__cards .arrow-line-2 {
+        top: 61%;
+        height: 40px;
+    }
+}

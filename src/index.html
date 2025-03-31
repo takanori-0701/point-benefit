@@ -6,7 +6,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="robots" content="noindex" />
   <!-- meta情報 -->
-  <title>CodeUps</title>
+  <title>ポイントギフト交換</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
@@ -18,6 +18,10 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
@@ -29,9 +33,567 @@
 
   </header>
   <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
+    <!--pointmain-visualここから-->
+    <section class="pointmain-visual">
+      <picture class="swiper-slide">
+        <source media="(max-width: 767px)" srcset="./assets/images/common/fv_img.webp">
+        <source media="(min-width: 768px)" srcset="./assets/images/common/fv_img.webp">
+        <img src="./assets/images/common/fv_img.webp" alt="コインのフルポイントアップギフト">
+      </picture>
+        <div class="pointmain-visual__btn">
+          <a href="#" class="common-btn common-btn--mainvisual">ギフト一覧をチェック</a>
+        </div>
+    </section>
+    <!--pointmain-visualここまで-->
+  
+    <!--point-giftここから-->
+    <section class="point-gift point-gift-margin">
+      <div class="point-gift__inner inner">
+        <div class="point-gift__tytle">
+          <h2 class="comon-title comon-title--gift">
+            ポイントギフト<br class="br-sp">交換方法
+          </h2>
+        </div>
+        <p class="point-gift__text">LINE上の「毎日ポイ活」から貯めらるポイント。<br>
+          取得したポイントについては、様々なギフトと交換ができます。<br>
+          本ページでは取得したポイントから、どのようなギフトが交換できるのかをご紹介いたします。<br>
+          <span class="point-gift__subtext">※お買取り、または、ご購入の際にご使用ができるギフトクーポンです。</span>
+        </p>
+        
+          <div class="point-gift__btn-wrap">
+            <a href="#" class="common-btn">ポイントの貯め方を知りたい</a>
+            <a href="#" class="common-btn">ポイントとギフトの交換方法</a>
+            <a href="#" class="common-btn">貯めたポイントを確認する</a>
+            <a href="#" class="common-btn">Q&A</a>
+          </div>
+      </div>
+    </section>
+  <!--point-giftここまで-->
+
+  <!--gift-listここから-->
+  <section class="gift-list gift-list-margin">
+    <div class="gift-list__inner inner">
+      <div class="gift-list__tytle">
+        <h2 class="comon-title">
+          ギフト一覧
+        </h2>
+      </div>
+    <div class="gift-list__cards giftlist-card">
+        <!-- ご購入用クーポンギフト -->
+        <div class="giftlist-card__container">
+            <div class="giftlist-card__item">
+                <div class="giftlist-card__header">
+                    <div class="giftlist-card__points">500,1000P</div>
+                    <h2 class="giftlist-card__title">ご購入用クーポンギフト</h2>
+                </div>
+                <div class="giftlist-card__visible-content">
+                    <div class="giftlist-card__text-area">
+                        <p class="giftlist-card__description">
+                            ご購入の際に使える500円引きor1,000円引きクーポンをプレゼント
+                        </p>
+                    </div>
+                    <div class="giftlist-card__image-container">
+                        <img src="./assets/images/common/3.webp" alt="ご購入用クーポン" class="giftlist-card__image">
+                    </div>
+                </div>
+                <div class="giftlist-card__hidden-content">
+                    <div class="giftlist-card__hidden-inner">
+                        <p class="giftlist-card__note">
+                          ご購入品1点につき1枚のご使用が可能
+                        </p>
+                        <button class="giftlist-card__btn">交換する</button>
+                        <p class="giftlist-card__linetext">LINEに移動します。</p>
+                    </div>
+                </div>
+                <!-- 開閉ボタンエリア（閉じた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-open">
+                    詳しくはこちら
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+                <!-- 開閉ボタンエリア（開いた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-close">
+                    閉じる
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- お買取用クーポンギフト -->
+        <div class="giftlist-card__item-container">
+            <div class="giftlist-card__item">
+                <div class="giftlist-card__header">
+                    <div class="giftlist-card__points">500, 1000P</div>
+                    <h2 class="giftlist-card__title">お買取用クーポンギフト</h2>
+                </div>
+                <div class="giftlist-card__visible-content">
+                    <div class="giftlist-card__text-area">
+                        <p class="giftlist-card__description">
+                            お買取りの際に使える500円アップor1,000円アップクーポンをプレゼント
+                        </p>
+                    </div>
+                    <div class="giftlist-card__image-container">
+                        <img src="./assets/images/common/4.webp" alt="お買取用クーポン" class="giftlist-card__image">
+                    </div>
+                </div>
+                <div class="giftlist-card__hidden-content">
+                    <div class="giftlist-card__hidden-inner">
+                        <p class="giftlist-card__note">
+                          お買取り品1点につき1枚のご使用が可能
+                        </p>
+                        <button class="giftlist-card__btn">交換する</button>
+                        <p class="giftlist-card__linetext">LINEに移動します。</p>
+                    </div>
+                </div>
+                <!-- 開閉ボタンエリア（閉じた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-open">
+                    詳しくはこちら
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+                <!-- 開閉ボタンエリア（開いた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-close">
+                    閉じる
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- クリーナーセットギフト -->
+        <div class="giftlist-card__item-container">
+            <div class="giftlist-card__item">
+                <div class="giftlist-card__header">
+                    <div class="giftlist-card__points">700P</div>
+                    <h2 class="giftlist-card__title">クリーナーセットギフト</h2>
+                </div>
+                <div class="giftlist-card__visible-content">
+                    <div class="giftlist-card__text-area">
+                        <p class="giftlist-card__description">
+                            レンズ、ボディを清掃できるクリーナーキットをプレゼント
+                        </p>
+                    </div>
+                    <div class="giftlist-card__image-container">
+                        <img src="./assets/images/common/5.webp" alt="クリーナーセット" class="giftlist-card__image">
+                    </div>
+                </div>
+                <div class="giftlist-card__hidden-content">
+                    <div class="giftlist-card__hidden-inner">
+                        <p class="giftlist-card__note">
+                          10万円以上のご購入をされる方が対象
+                        </p>
+                        <button class="giftlist-card__btn">交換する</button>
+                        <p class="giftlist-card__linetext">LINEに移動します。</p>
+                    </div>
+                </div>
+                <!-- 開閉ボタンエリア（閉じた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-open">
+                    詳しくはこちら
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+                <!-- 開閉ボタンエリア（開いた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-close">
+                    閉じる
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 中古レンズフィルターギフト -->
+        <div class="giftlist-card__item-container">
+            <div class="giftlist-card__item">
+                <div class="giftlist-card__header">
+                    <div class="giftlist-card__points">1,300P</div>
+                    <h2 class="giftlist-card__title">中古レンズフィルターギフト</h2>
+                </div>
+                <div class="giftlist-card__visible-content">
+                    <div class="giftlist-card__text-area">
+                        <p class="giftlist-card__description">
+                            購入されたレンズに合う中古フィルターをプレゼント
+                        </p>
+                    </div>
+                    <div class="giftlist-card__image-container">
+                        <img src="./assets/images/common/6.webp" alt="中古レンズフィルター" class="giftlist-card__image">
+                    </div>
+                </div>
+                <div class="giftlist-card__hidden-content">
+                    <div class="giftlist-card__hidden-inner">
+                        <p class="giftlist-card__note">
+                          ご用意ができない場合はポイントをご返却。フィルターの具体的なモデル指定はできません。
+                        </p>
+                        <button class="giftlist-card__btn">交換する</button>
+                        <p class="giftlist-card__linetext">LINEに移動します。</p>
+                    </div>
+                </div>
+                <!-- 開閉ボタンエリア（閉じた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-open">
+                    詳しくはこちら
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+                <!-- 開閉ボタンエリア（開いた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-close">
+                    閉じる
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 写真ギフト -->
+        <div class="giftlist-card__item-container">
+            <div class="giftlist-card__item">
+                <div class="giftlist-card__header">
+                    <div class="giftlist-card__points">3,000P</div>
+                    <h2 class="giftlist-card__title">写真ギフト</h2>
+                </div>
+                <div class="giftlist-card__visible-content">
+                    <div class="giftlist-card__text-area">
+                        <p class="giftlist-card__description">
+                          お好きな写真データをプリント（2Lサイズ/カラープリント）
+                        </p>
+                    </div>
+                    <div class="giftlist-card__image-container">
+                        <img src="./assets/images/common/7.webp" alt="写真ギフト" class="giftlist-card__image">
+                    </div>
+                </div>
+                <div class="giftlist-card__hidden-content">
+                    <div class="giftlist-card__hidden-inner">
+                        <p class="giftlist-card__note">
+                          1か月以内のご購入、お買取りの際に10万円（税込）以上のお取引をされた方が対象
+                        </p>
+                        <button class="giftlist-card__btn">交換する</button>
+                        <p class="giftlist-card__linetext">LINEに移動します。</p>
+                    </div>
+                </div>
+                <!-- 開閉ボタンエリア（閉じた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-open">
+                    詳しくはこちら
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+                <!-- 開閉ボタンエリア（開いた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-close">
+                    閉じる
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- カメラクリーニングギフト -->
+        <div class="giftlist-card__item-container">
+            <div class="giftlist-card__item">
+                <div class="giftlist-card__header">
+                    <div class="giftlist-card__points">3,200P</div>
+                    <h2 class="giftlist-card__title">フォトフレームギフト</h2>
+                </div>
+                <div class="giftlist-card__visible-content">
+                    <div class="giftlist-card__text-area">
+                        <p class="giftlist-card__description">
+                          2Lサイズに合うフォトフレームをプレゼント
+                        </p>
+                    </div>
+                    <div class="giftlist-card__image-container">
+                        <img src="./assets/images/common/8.webp" alt="カメラクリーニング" class="giftlist-card__image">
+                    </div>
+                </div>
+                <div class="giftlist-card__hidden-content">
+                    <div class="giftlist-card__hidden-inner">
+                        <p class="giftlist-card__note">
+                          1か月以内のご購入、お買取りの際に10万円（税込）以上のお取引をされた方が対象
+                        </p>
+                        <button class="giftlist-card__btn">交換する</button>
+                        <p class="giftlist-card__linetext">LINEに移動します。</p>
+                    </div>
+                </div>
+                <!-- 開閉ボタンエリア（閉じた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-open">
+                    詳しくはこちら
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+                <!-- 開閉ボタンエリア（開いた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-close">
+                    閉じる
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- レンズケースギフト -->
+        <div class="giftlist-card__item-container">
+            <div class="giftlist-card__item">
+                <div class="giftlist-card__header">
+                    <div class="giftlist-card__points">1,540P</div>
+                    <h2 class="giftlist-card__title">レンズケースギフト</h2>
+                </div>
+                <div class="giftlist-card__visible-content">
+                    <div class="giftlist-card__text-area">
+                        <p class="giftlist-card__description">
+                          ご指定サイズのレンズケースをプレゼント
+                        </p>
+                    </div>
+                    <div class="giftlist-card__image-container">
+                        <img src="./assets/images/common/9.webp" alt="レンズケースギフト" class="giftlist-card__image">
+                    </div>
+                </div>
+                <div class="giftlist-card__hidden-content">
+                    <div class="giftlist-card__hidden-inner">
+                        <p class="giftlist-card__note">
+                          10万円以上のご購入をされる方が対象</p>
+                        <button class="giftlist-card__btn">交換する</button>
+                        <p class="giftlist-card__linetext">LINEに移動します。</p>
+                    </div>
+                </div>
+                <!-- 開閉ボタンエリア（閉じた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-open">
+                    詳しくはこちら
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+                <!-- 開閉ボタンエリア（開いた状態） -->
+                <div class="giftlist-card__toggle-area giftlist-card__toggle-area-close">
+                    閉じる
+                    <div class="giftlist-card__toggle"></div>
+                </div>
+            </div>
+        </div>
     </div>
+  </div>
+  </section>
+  <!--gift-listここまで-->
+
+  <!--pointgetここから-->
+  <section class="pointget">
+    <div class="pointget__inner inner">
+      <div class="pointget__title">
+        <h2 class="comon-title">
+          ポイ活で<br class="br-sp">ポイントゲット方法
+        </h2>
+      </div>
+      <div class="pointget__cards">       
+        <!-- ポイント1 -->
+        <div class="pointget-card">
+            <h3 class="pointget-card__title">POINT1</h3>
+            <img src="./assets/images/common/10.webp" alt="LINEメニューの毎日ポイ活タブ" class="pointget-card__image">
+            <p class="pointget-card__text">LINEアカウント「アールイーカメラ　買取」のLINEメニュー「毎日ポイ活」のタブをタップ</p>
+            <a href="#" class="line-button">
+                <svg class="line-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                    <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992zm-18.988-2.595c.129 0 .234.105.234.234v4.153h2.287c.129 0 .233.104.233.233v.842c0 .129-.104.234-.233.234h-3.363c-.063 0-.119-.025-.161-.065-.043-.041-.072-.098-.072-.169v-5.229c0-.129.104-.233.233-.233h.842zm14.992 0c.129 0 .233.105.233.234v.842c0 .129-.104.234-.233.234h-2.287v.883h2.287c.129 0 .233.105.233.234v.842c0 .129-.104.234-.233.234h-2.287v.884h2.287c.129 0 .233.105.233.233v.842c0 .129-.104.234-.233.234h-3.363c-.063 0-.12-.025-.162-.065-.042-.041-.07-.098-.07-.169v-5.229c0-.063.025-.12.065-.162.041-.042.099-.071.167-.071h3.363zm-10.026.001c.129 0 .233.104.233.233v5.229c0 .129-.104.234-.233.234h-.842c-.129 0-.233-.105-.233-.234v-5.229c0-.129.104-.233.233-.233h.842zm2.55 0c.13 0 .233.104.233.233v5.229c0 .129-.103.234-.233.234h-.842c-.129 0-.233-.105-.233-.234v-3.176l-1.077 1.645-.154.154c-.042.041-.098.07-.154.07s-.112-.029-.154-.07l-.154-.154-1.077-1.645v3.176c0 .129-.104.234-.233.234h-.841c-.13 0-.234-.105-.234-.234v-5.229c0-.129.104-.233.234-.233h1.224l.154.154 1.077 1.645 1.077-1.645.154-.154h1.224z"/>
+                </svg>
+                LINEアカウントはこちら
+            </a>
+        </div>
+        
+        <!-- ポイント2 -->
+        <div class="pointget-card">
+            <h3 class="pointget-card__title">POINT2</h3>
+            <img src="./assets/images/common/11.webp" alt="バナーをタップ" class="pointget-card__image">
+            <p class="pointget-card__text">バナーをタップ</p>
+        </div>
+        
+        <!-- ポイント3 -->
+        <div class="pointget-card">
+            <h3 class="pointget-card__title">POINT3</h3>
+            <img src="./assets/images/common/12.webp" alt="ポイントゲット画面" class="pointget-card__image">
+            <p class="pointget-card__text">LINE画面に戻って、新たにお送りした画像をタップ。ポイントをゲット！</p>
+        </div>
+    </div>
+    </div>
+  </section>
+  <!--pointgetここまで-->
+
+  <!--point_presentここから-->
+  <section class="point_present">
+    <div class="point_present__inner inner">
+      <div class="point_present__tytle">
+        <h2 class="comon-title">
+          サービスをご利用で<br class="br-sp">更にポイントプレゼント！
+        </h2>
+      </div>
+      <div class="point_present__btnbox">
+        <div class="common-btn2">
+          <p class="common-btn2__text">
+            <span class="common-btn2__text-inner">
+              <span>初回買取成約時に</span>
+              <span class="common-btn2__bottom">1000Pプレゼント！</span>
+            </span>
+          </p>
+          <a href="#" class="common-btn2__btn">
+            アールイーカメラで「見積り」
+          </a>
+        </div> 
+        <div class="common-btn2">
+          <p class="common-btn2__text">
+            <span class="common-btn2__text-inner">
+              <span>初回商品購入時に</span>
+              <span class="common-btn2__bottom">1000Pプレゼント！</span>
+            </span>
+          </p>
+          <a href="#" class="common-btn2__btn">
+            アールイーカメラで「見積り」
+          </a>
+        </div> 
+      </div>
+    </div>
+  </section>
+  <!--point_presentここまで-->
+
+  <!--pointgiftここから-->
+  <section class="pointgift">
+    <div class="pointgift__inner inner">
+      <div class="pointgift__title">
+        <h2 class="comon-title">
+          ポイントとギフトの<br class="br-sp">交換方法
+        </h2>
+      </div>
+      <div class="pointgift__text">
+        <span>ギフトクーポンは「お買取り」または、「ご購入」の際にご使用ができます。</span><br>
+        クーポンコードを取得した後は、ご購入であればご注文画面でクーポンコードをご入力、<br>
+        お買取りでご使用の場合はご使用の旨を担当スタッフへご連絡くださいませ。
+      </div>
+      <div class="pointget__cards">       
+        <!-- ポイント1 -->
+        <div class="pointget-card">
+            <h3 class="pointget-card__title">POINT1</h3>
+            <img src="./assets/images/common/10.webp" alt="LINEメニューの毎日ポイ活タブ" class="pointget-card__image">
+            <p class="pointget-card__text">LINEアカウント「アールイーカメラ 買取」のLINEメニューを開く。「クーポンを獲得」からクーポンを取得する。</p>
+            <a href="#" class="line-button">
+                <svg class="line-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                    <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.121.303.079.778.039 1.085l-.171 1.027c-.053.303-.242 1.186 1.039.647 1.281-.54 6.911-4.069 9.428-6.967 1.739-1.907 2.572-3.843 2.572-5.992zm-18.988-2.595c.129 0 .234.105.234.234v4.153h2.287c.129 0 .233.104.233.233v.842c0 .129-.104.234-.233.234h-3.363c-.063 0-.119-.025-.161-.065-.043-.041-.072-.098-.072-.169v-5.229c0-.129.104-.233.233-.233h.842zm14.992 0c.129 0 .233.105.233.234v.842c0 .129-.104.234-.233.234h-2.287v.883h2.287c.129 0 .233.105.233.234v.842c0 .129-.104.234-.233.234h-2.287v.884h2.287c.129 0 .233.105.233.233v.842c0 .129-.104.234-.233.234h-3.363c-.063 0-.12-.025-.162-.065-.042-.041-.07-.098-.07-.169v-5.229c0-.063.025-.12.065-.162.041-.042.099-.071.167-.071h3.363zm-10.026.001c.129 0 .233.104.233.233v5.229c0 .129-.104.234-.233.234h-.842c-.129 0-.233-.105-.233-.234v-5.229c0-.129.104-.233.233-.233h.842zm2.55 0c.13 0 .233.104.233.233v5.229c0 .129-.103.234-.233.234h-.842c-.129 0-.233-.105-.233-.234v-3.176l-1.077 1.645-.154.154c-.042.041-.098.07-.154.07s-.112-.029-.154-.07l-.154-.154-1.077-1.645v3.176c0 .129-.104.234-.233.234h-.841c-.13 0-.234-.105-.234-.234v-5.229c0-.129.104-.233.234-.233h1.224l.154.154 1.077 1.645 1.077-1.645.154-.154h1.224z"/>
+                </svg>
+                LINEアカウントはこちら
+            </a>
+        </div>
+        
+        <!-- ポイント2 -->
+        <div class="pointget-card">
+            <h3 class="pointget-card__title">POINT2</h3>
+            <img src="./assets/images/common/11.webp" alt="バナーをタップ" class="pointget-card__image">
+            <p class="pointget-card__text">「クーポンを使う」から取得したクーポンを使用する。</p>
+        </div>
+        
+        <!-- ポイント3 -->
+        <div class="pointget-card">
+            <h3 class="pointget-card__title">POINT3</h3>
+            <img src="./assets/images/common/12.webp" alt="ポイントゲット画面" class="pointget-card__image">
+            <p class="pointget-card__text">「クーポンコード」がLINE上に自動発信されるので、ご注文の場合はご注文画面にクーポンコードのご入力を、お買取りの場合は担当者へご利用希望をお伝えください。</p>
+        </div>
+    </div>
+    <p class="pointget-card__linetext">※写真ギフトにつきましてはフォームが自動発話されます。そちらのフォームからお申込みください。</p>
+    </div>
+  </section>
+  <!--pointgetここまで-->
+
+  <!--point-qaここから-->
+  <section class="point-qa">
+    <div class="point-qa__inner inner">
+      <div class="p-faq__content" data-astro-cid-oqjbs5yv="">
+        <details class="p-faq__accordion" data-astro-cid-oqjbs5yv="">
+          <summary class="p-faq__summary" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__question-wrapper" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__Q-icon" data-astro-cid-oqjbs5yv="">Q</span>
+              <p class="p-faq__Q-text" data-astro-cid-oqjbs5yv="">プリントされる写真のサイズはどのようなものでしょうか？</p>
+            </div>
+  
+            <span class="p-faq__toggle-icon" aria-hidden="true" data-astro-cid-oqjbs5yv=""></span>
+          </summary>
+          <div class="p-faq__container" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__A-box" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__A-icon" data-astro-cid-oqjbs5yv="">A</span>
+              <p class="p-faq__A-text" data-astro-cid-oqjbs5yv="">現状2Lサイズ（127×178mm）のみとなります。</p>
+            </div>
+          </div>
+        </details>
+        <details class="p-faq__accordion" data-astro-cid-oqjbs5yv="">
+          <summary class="p-faq__summary" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__question-wrapper" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__Q-icon" data-astro-cid-oqjbs5yv="">Q</span>
+              <p class="p-faq__Q-text" data-astro-cid-oqjbs5yv="">カラー/モノクロ指定はできますか？</p>
+            </div>
+            <span class="p-faq__toggle-icon" aria-hidden="true" data-astro-cid-oqjbs5yv=""></span>
+          </summary>
+          <div class="p-faq__container" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__A-box" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__A-icon" data-astro-cid-oqjbs5yv="">A</span>
+              <p class="p-faq__A-text" data-astro-cid-oqjbs5yv="">
+                デジタルカラープリントのみのご対応となります。モノクロ写真のプリントも対応できますが、通常のモノクロプリントの仕上がりと比べ若干色味が異なります。
+              </p>
+            </div>
+          </div>
+        </details>
+        <details class="p-faq__accordion" data-astro-cid-oqjbs5yv="">
+          <summary class="p-faq__summary" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__question-wrapper" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__Q-icon" data-astro-cid-oqjbs5yv="">Q</span>
+              <p class="p-faq__Q-text" data-astro-cid-oqjbs5yv="">トリミングはできますか？</p>
+            </div>
+            <span class="p-faq__toggle-icon" aria-hidden="true" data-astro-cid-oqjbs5yv=""></span>
+          </summary>
+          <div class="p-faq__container" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__A-box" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__A-icon" data-astro-cid-oqjbs5yv="">A</span>
+              <p class="p-faq__A-text" data-astro-cid-oqjbs5yv="">
+                できます。「ノートリミングorトリミングあり」にてご選択可能です。
+                ノートリミングの場合はデータサイズ通り、余白があります。トリミングありの場合は写真の比率によって絵柄の周囲が多少切られます。
+              </p>
+            </div>
+          </div>
+        </details>
+        <details class="p-faq__accordion" data-astro-cid-oqjbs5yv="">
+          <summary class="p-faq__summary" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__question-wrapper" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__Q-icon" data-astro-cid-oqjbs5yv="">Q</span>
+              <p class="p-faq__Q-text" data-astro-cid-oqjbs5yv="">余白の幅の指定は可能ですか？</p>
+            </div>
+            <span class="p-faq__toggle-icon" aria-hidden="true" data-astro-cid-oqjbs5yv=""></span>
+          </summary>
+          <div class="p-faq__container" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__A-box" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__A-icon" data-astro-cid-oqjbs5yv="">A</span>
+              <p class="p-faq__A-text" data-astro-cid-oqjbs5yv="">指定はできません。</p>
+            </div>
+          </div>
+        </details>
+        <details class="p-faq__accordion" data-astro-cid-oqjbs5yv="">
+          <summary class="p-faq__summary" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__question-wrapper" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__Q-icon" data-astro-cid-oqjbs5yv="">Q</span>
+              <p class="p-faq__Q-text" data-astro-cid-oqjbs5yv="">
+                間違えてポイントをクーポンに変換してしまいました。どうすればいいですか？
+              </p>
+            </div>
+            <span class="p-faq__toggle-icon" aria-hidden="true" data-astro-cid-oqjbs5yv=""></span>
+          </summary>
+          <div class="p-faq__container" data-astro-cid-oqjbs5yv="">
+            <div class="p-faq__A-box" data-astro-cid-oqjbs5yv="">
+              <span class="p-faq__A-icon" data-astro-cid-oqjbs5yv="">A</span>
+              <p class="p-faq__A-text" data-astro-cid-oqjbs5yv="">
+                LINEからご連絡いただけましたら、クーポン交換分のポイントをお戻し致します。
+              </p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!--point-qaここまで-->
+
+  <div class="__tytle">
+    <h2 class="comon-title">
+      ギフト一覧
+    </h2>
+  </div>
+
+  <div class="__btn">
+    <a href="#" class="common-btn">ポイントの貯め方を知りたい</a>
+  </div>
+
+  <div class="__btn2">
+    <div class="common-btn2">
+      <p class="common-btn2__text">
+        <span class="common-btn2__text-inner">
+          <span>キャンペーン期間中</span>
+          <span class="common-btn2__bottom">1000Pプレゼント！</span>
+        </span>
+      </p>
+      <a href="#" class="common-btn2__btn">
+        アールイーカメラで「見積り」
+      </a>
+    </div>  
+  </div>
   </main>
   <footer>
 

@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.common-btn2 {
+    width: rem(340);
+}
+
+.common-btn2__text {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: rem(16);
+    color: $black;
+    font-weight: $bold;
+    text-align: center;
+    gap: rem(8); 
+}
+
+.common-btn2__text-inner {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.common-btn2__bottom {
+    font-size: rem(22);
+    font-weight: $bold;
+    color: $red;
+}
+
+// 擬似要素（斜め線）の調整
+.common-btn2__text::before,
+.common-btn2__text::after {
+    content: "";
+    display: inline-block;
+    background: $black; 
+    width: rem(1); 
+    height: 2em;
+    margin: 0 1em;
+}
+
+.common-btn2__text::before {
+    transform: rotate(-35deg); // 左斜め線の角度
+}
+
+.common-btn2__text::after {
+    transform: rotate(35deg); // 右斜め線の角度
+}
+
+.common-btn2__btn {
+    display: inline-block;
+    width: rem(340);
+    font-size: rem(18);
+    font-weight: $bold;
+    padding: rem(19) 0;
+    border-radius: 8px;
+    background: $red;
+    color: $white;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    margin-top: rem(23);
+}
+.common-btn2__btn:hover {
+    opacity: 0.7;
+}
+
