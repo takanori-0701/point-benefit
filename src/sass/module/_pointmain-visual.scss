@@ -4,12 +4,8 @@
     position: relative;
 }
 
-.pointmain-visual__inner {
-
-}
-
-.inner {
-
+.pointmain-visual__img img {
+    width: 100%;
 }
 
 .pointmain-visual__btn {
@@ -18,12 +14,3 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.common-btn {
-
-}
-
-.common-btn--mainvisual {
-
-}
-

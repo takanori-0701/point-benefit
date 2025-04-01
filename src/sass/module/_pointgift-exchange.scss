@@ -1,0 +1,28 @@
+@use "global" as *;
+
+.pointgift-exchange {
+  background-color: #f2f2f2;
+  padding: rem(75) 0;
+}
+
+.pointgift-exchange__title {
+    text-align: center;
+}
+
+.comon-title--gift {
+    position: relative;
+}
+
+.pointgift-exchange__text {
+    font-size: rem(16);
+    margin-top: rem(60);
+    text-align: center;
+    @include mq(md) {
+        font-size: rem(20);
+        }
+}
+
+.pointgift-exchange__linetext {
+    font-size: rem(16);
+    margin-top: rem(50);
+}

@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.service-point__title {
+    text-align: center;
+}
+
+.service-point__btnbox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(40);
+    margin-top: rem(40);
+    place-items: center;
+    @include mq(md) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(20);
+        }
+}
+
+.common-btn2__text-inner--point {
+    color: #009245;
+    font-size: rem(22);
+}
+
+.common-btn2__bottom--point {
+    color: #009245;
+    font-size: rem(22);
+}
+
+
+

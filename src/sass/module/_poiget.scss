@@ -22,7 +22,7 @@
 .pointget-card {
     background-color: #fff;
     width: 30%;
-    padding: 30px 20px;
+    padding: rem(30) rem(20);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -32,19 +32,18 @@
     color: #8B5A2B;
     font-size: rem(19);
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
     text-align: center;
 }
 
 .pointget-card__image {
     width: 100%;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+    margin-bottom: rem(20);
 }
 
 .pointget-card__text {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: rem(16);
+    margin-bottom: rem(20);
     line-height: 1.6;
     flex-grow: 1; /* テキストエリアを伸ばして高さを調整 */
 }
@@ -57,21 +56,26 @@
     background-color: #00B900;
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 5px;
+    padding: rem(15) rem(20);
+    border-radius: rem(8);
     font-weight: bold;
     margin-top: auto; /* 下部に配置 */
     transition: background-color 0.3s;
 }
+
+.line-button img {
+    width: rem(30);
+    margin-right: rem(10);
+}   
 
 .line-button:hover {
     background-color: #009900;
 }
 
 .line-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+    width: rem(24);
+    height: rem(24);
+    margin-right: rem(10);
 }
 
 /* 矢印の疑似要素 */
@@ -80,10 +84,10 @@
     content: '';
     position: absolute;
     top: 50%;
-    width: 30px;
-    height: 30px;
-    border-top: 2px solid #aaa;
-    border-right: 2px solid #aaa;
+    width: rem(30);
+    height: rem(30);
+    border-top: rem(2) solid #aaa;
+    border-right: rem(2) solid #aaa;
     transform: translateY(-50%) rotate(45deg);
     z-index: 1;
 }
@@ -96,6 +100,7 @@
 .pointget__cards::after {
     left: 65%;
 }
+
 
 .pointget__cards .arrow-line-1 {
     left: 31%;
@@ -116,8 +121,8 @@
     
     .pointget-card {
         width: 100%;
-        max-width: 500px;
-        margin-bottom: 50px;
+        max-width: rem(500);
+        margin-bottom: rem(50);
     }
     
     /* スマホ表示時の矢印 - 縦方向に変更 */
@@ -129,30 +134,31 @@
     }
     
     .pointget__cards::before {
-        top: 30%;
+        top: 34%;
     }
     
     .pointget__cards::after {
-        top: 66%;
+        top: 64%;
+    }
+    .pointget__cards--exchange {
+        position: relative;
+    }
+    .pointget__cards--exchange::before {
+        top: 30.5%;
     }
     
-    /* スマホ表示時の矢印の棒部分 */
-    .pointget__cards .arrow-line-1,
-    .pointget__cards .arrow-line-2 {
-        left: 50%;
-        width: 2px;
-        height: 30px;
-        transform: translateX(-50%);
-        top: auto;
+    .pointget__cards--exchange::after {
+        top: 59%;
     }
     
+        
     .pointget__cards .arrow-line-1 {
         top: 28%;
-        height: 40px;
+        height: rem(40);
     }
     
     .pointget__cards .arrow-line-2 {
         top: 61%;
-        height: 40px;
+        height: rem(40);
     }
 }

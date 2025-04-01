@@ -13,36 +13,47 @@
 }
 
 .point-gift__text {
-    font-size: rem(20);
+    font-size: rem(16);
     margin-top: rem(60);
     text-align: center;
+    @include mq(md) {
+        font-size: rem(20);
+        }
 }
 
 .point-gift__subtext {
     font-size: rem(16);
 }
 
+/* ボタンレイアウト用CSS */
 .point-gift__btn-wrap {
     margin-top: rem(65);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(20);
-    
+    position: relative;
 }
 
-.point-gift__btn-wrap:nth-child(even) {
-    text-align: left;
-}
-.point-gift__btn-wrap:nth-child(odd) {
-    text-align: right;
-}
-.common-btn {
-
+/* 左側のボタンを右寄せにする */
+.point-gift__btn-wrap a:nth-child(odd) {
+justify-self: end;
 }
 
-
-
-.common-btn {
-
+/* 右側のボタンは左寄せのまま */
+.point-gift__btn-wrap a:nth-child(even) {
+justify-self: start;
 }
 
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+.point-gift__btn-wrap {
+    grid-template-columns: 1fr;
+    gap: rem(15);
+}
+
+/* スマホ表示では中央揃え */
+.point-gift__btn-wrap a:nth-child(odd),
+.point-gift__btn-wrap a:nth-child(even) {
+    justify-self: center;
+}
+}

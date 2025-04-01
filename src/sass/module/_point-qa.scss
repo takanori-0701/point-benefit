@@ -1,0 +1,165 @@
+@use "global" as *;
+
+
+.point-qa {
+    padding: rem(75) 0;
+    background-color: #f2f2f2;
+}
+
+.point-qa__tytle {
+    text-align: center;
+
+}
+
+
+/* Q&Aリスト */
+.qa-list {
+width: 100%;
+margin-top: rem(35);
+}
+
+/* Q&A項目 */
+.qa-item {
+border-bottom: rem(1) solid #e0e0e0;
+margin-bottom: 0;
+}
+
+/* Q&A項目のサマリー（質問部分） */
+.qa-item__summary {
+display: flex;
+align-items: center;
+padding: rem(20) 0;
+cursor: pointer;
+position: relative;
+list-style: none;
+}
+
+/* サマリーがクリックされたときのアウトラインを消す */
+.qa-item__summary::-webkit-details-marker {
+display: none;
+}
+
+/* Qマーク */
+.qa-item__q-mark {
+color: $tytle;
+font-size: rem(24);
+font-weight: bold;
+margin-right: rem(15);
+min-width: rem(24);
+}
+
+/* 質問テキスト */
+.qa-item__question {
+flex-grow: 1;
+font-size: rem(18);
+font-weight: $normal;
+color: #333;
+}
+
+/* トグルアイコン（プラス/マイナス） */
+.qa-item__toggle-icon {
+position: relative;
+width: rem(24);
+height: rem(24);
+margin-left: rem(15);
+}
+
+/* プラスアイコン（横線） */
+.qa-item__plus {
+position: absolute;
+top: 50%;
+left: 0;
+width: rem(24);
+height: rem(2);
+background-color: #ccc;
+transform: translateY(-50%);
+}
+
+/* プラスアイコン（縦線） */
+.qa-item__plus::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: rem(2);
+height: rem(24);
+background-color: #ccc;
+transform: translate(-50%, -50%);
+transition: transform 0.3s ease;
+}
+
+/* 開いた状態のプラスアイコン（縦線を回転させて非表示に） */
+.qa-item[open] .qa-item__plus::after {
+transform: translate(-50%, -50%) rotate(90deg);
+opacity: 0;
+}
+
+/* 回答コンテンツ */
+.qa-item__content {
+padding: 0 0 rem(20) rem(39); /* Qマークの幅+マージンに合わせる */
+animation: slideDown 0.3s ease-out;
+}
+
+/* 回答ボックス */
+.qa-item__answer-box {
+display: flex;
+align-items: flex-start;
+}
+
+/* Aマーク */
+.qa-item__a-mark {
+color: #333;
+font-size: rem(24);
+font-weight: bold;
+margin-right: rem(15);
+min-width: rem(24);
+}
+
+/* 回答テキスト */
+.qa-item__answer-text {
+flex-grow: 1;
+font-size: rem(16);
+line-height: 1.8;
+color: #666;
+}
+
+/* アニメーション */
+@keyframes slideDown {
+from {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+.qa-section__title {
+    font-size: rem(28);
+}
+
+.qa-item__summary {
+    padding: rem(15) 0;
+}
+
+.qa-item__q-mark,
+.qa-item__a-mark {
+    font-size: rem(20);
+    min-width: rem(20);
+}
+
+.qa-item__question {
+    font-size: rem(16);
+}
+
+.qa-item__content {
+    padding: 0 0 rem(15) rem(35);
+}
+
+.qa-item__answer-text {
+    font-size: rem(14);
+}
+}

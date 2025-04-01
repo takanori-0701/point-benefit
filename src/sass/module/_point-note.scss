@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.point-note {
+    background-color: #f2f2f2;
+    padding: rem(75) 0;
+}
+
+.point-note__tytle {
+    text-align: center;
+}
+
+.comon-title {
+
+}
+
+.point-note__text {
+    text-align: center;
+    margin-top: rem(60);
+}
+

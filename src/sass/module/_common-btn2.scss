@@ -35,7 +35,7 @@
     display: inline-block;
     background: $black; 
     width: rem(1); 
-    height: 2em;
+    height: 3em;
     margin: 0 1em;
 }
 
@@ -49,11 +49,12 @@
 
 .common-btn2__btn {
     display: inline-block;
-    width: rem(340);
+    max-width: rem(340);
+    width: 100%;
     font-size: rem(18);
     font-weight: $bold;
     padding: rem(19) 0;
-    border-radius: 8px;
+    border-radius: rem(8);
     background: $red;
     color: $white;
     text-align: center;
@@ -63,5 +64,17 @@
 }
 .common-btn2__btn:hover {
     opacity: 0.7;
+}
+
+.common-btn2__btn--point {
+    background-color: #00B900;
+    display: flex;
+    justify-content: center;
+    margin-top: rem(15);
+}
+
+.common-btn2__btn--point img {
+    width: rem(25);
+    margin-right: rem(10);
 }
 

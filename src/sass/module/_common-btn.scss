@@ -7,8 +7,8 @@
     font-weight: $bold;
     padding: rem(19) 0;
     width: rem(340);
-    border: 1px solid #603813;
-    border-radius: 8px;
+    border: rem(1) solid #603813;
+    border-radius: rem(8);
     background: $bak;
     color: #603813;
     text-align: center;
@@ -40,7 +40,7 @@
 .common-btn--mainvisual {
     background-color: $red;
     color: $white;
-    border: 1px solid $red;
+    border: rem(1) solid $red;
 }
 .common-btn--mainvisual::before {
     content: "";
