@@ -14,7 +14,13 @@
 }
 
 .point-note__text {
-    text-align: center;
+    font-size: rem(14);
+    line-height: 2.375em;
+    text-align: left;
     margin-top: rem(60);
+    @include mq(md) {
+        font-size: rem(16);
+        text-align: center;
+        }
 }
 

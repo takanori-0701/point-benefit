@@ -17,6 +17,8 @@
         margin-top: rem(70);
     }
     
+    
+
     /* 各ギフトアイテムを独立したコンテナとして扱う */
     .giftlist-card__item-container {
         /* 高さを自動調整し、他のアイテムに影響を与えない */
@@ -28,6 +30,7 @@
         border-radius: rem(8);
         // overflow: hidden;
         position: relative;
+        
     }
     
     /* ヘッダー部分（ポイント表示とタイトル） */
@@ -75,11 +78,14 @@
     .giftlist-card__points {
         position: absolute;
         top: 0;
-        right: 0;
+        right: max(0px, 50% - min(50vw, 105px));
         background-color: #e74c3c;
         color: white;
         font-size: rem(13);
         padding: rem(2) rem(5);
+        @include mq(md) {
+            right: max(0px, 50% - min(34vw, 76px));
+            }
     }
     
     .giftlist-card__image {
@@ -168,6 +174,11 @@
         transition: background-color 0.3s ease;
         margin-top: rem(30);
     }
+    .giftlist-card__btn a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
     
     .giftlist-card__btn:hover {
         background-color: #27ae60;
@@ -228,6 +239,9 @@
             padding-right: 0;
             margin-bottom: rem(10);
         }
+        // .giftlist-card__points {
+        //     right: max(0px, 50% - min(34vw, 74px));
+        // }
     }
     
     @media (max-width: 600px) {

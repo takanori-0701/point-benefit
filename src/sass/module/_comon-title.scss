@@ -1,9 +1,13 @@
 @use "global" as *;
 
 .comon-title {
-    font-size: rem(35);
+    font-size: rem(28);
     color: $tytle;
     font-weight: $bold;
+    white-space:nowrap;
+    @include mq(md) {
+        font-size: rem(35);
+        }
 }
 
 .comon-title--gift {
@@ -11,25 +15,36 @@
     align-items: center;
     justify-content: center;
     gap: rem(15);
-    font-size: rem(35);
+    font-size: rem(28);
     color: $tytle;
     font-weight: $bold;
     position: relative;
+    @include mq(md) {
+        font-size: rem(35);
+        }
 }
 
 .comon-title--gift::before {
         content: "";
-        width: rem(146); 
-        height: rem(102);
+        width: rem(60); 
+        height: rem(45);
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url("../images/common/1.webp");
+        @include mq(md) {
+            width: rem(146);
+            height: rem(102);
+            }
 }
 .comon-title--gift::after {
     content: "";
-    width: rem(96); 
-    height: rem(96);
+    width: rem(50); 
+    height: rem(50);
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../images/common/2.webp");
+    @include mq(md) {
+        width: rem(96);
+        height: rem(96);
+        }
 }

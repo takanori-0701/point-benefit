@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch; /* 子要素の高さを揃える */
-    position: relative;
+    // position: relative;
     margin-top: rem(67);
 }
 
@@ -78,41 +78,44 @@
     margin-right: rem(10);
 }
 
-/* 矢印の疑似要素 */
-.pointget__cards::before,
-.pointget__cards::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: rem(30);
-    height: rem(30);
-    border-top: rem(2) solid #aaa;
-    border-right: rem(2) solid #aaa;
-    transform: translateY(-50%) rotate(45deg);
-    z-index: 1;
+/* 中間にある `.pointget-card` のみ矢印を表示する */
+.pointget-card:not(:first-of-type):not(:last-of-type) {
+    position: relative; // 疑似要素の基準を設定
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 1.875rem; // rem(30)
+        height: 1.875rem;
+        border-top: 0.125rem solid #aaa; // rem(2)
+        border-right: 0.125rem solid #aaa;
+        transform: translateY(-50%) rotate(45deg);
+        z-index: 1;
+    }
+
+    /* 矢印の位置調整 */
+    &::before {
+        left: -15%;
+    }
+
+    &::after {
+        left: 102%;
+    }
 }
 
-/* 矢印の位置調整 */
-.pointget__cards::before {
-    left: 30%;
-}
 
-.pointget__cards::after {
-    left: 65%;
-}
-
-
-.pointget__cards .arrow-line-1 {
+.pointget__card {
     left: 31%;
     width: 5%;
 }
 
-.pointget__cards .arrow-line-2 {
+.pointget__card {
     left: 64%;
     width: 5%;
 }
 
-/* レスポンシブ対応 */
 @media (max-width: 768px) {
     .pointget__cards {
         flex-direction: column;
@@ -124,41 +127,47 @@
         max-width: rem(500);
         margin-bottom: rem(50);
     }
-    
-    /* スマホ表示時の矢印 - 縦方向に変更 */
-    .pointget__cards::before,
-    .pointget__cards::after {
-        left: 50%;
-        transform: translateX(-50%) rotate(135deg);
-        top: auto;
+    .pointget-card:last-child {
+        margin-bottom: rem(0);
     }
-    
-    .pointget__cards::before {
-        top: 34%;
-    }
-    
-    .pointget__cards::after {
-        top: 64%;
-    }
-    .pointget__cards--exchange {
+
+    /* ======== 最初と最後を除外して矢印を適用 ======== */
+    .pointget-card:not(:first-of-type):not(:last-of-type) {
         position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: rem(30);
+            height: rem(30);
+            border-top: rem(2) solid #aaa;
+            border-right: rem(2) solid #aaa;
+            transform: translateX(-50%) rotate(135deg);
+            z-index: 1;
+        }
+
+        /* 矢印の位置 */
+        &::before {
+            top: -12%;
+        }
+
+        &::after {
+            top: 100%;
+        }
     }
-    .pointget__cards--exchange::before {
-        top: 30.5%;
-    }
-    
-    .pointget__cards--exchange::after {
-        top: 59%;
-    }
-    
-        
-    .pointget__cards .arrow-line-1 {
-        top: 28%;
-        height: rem(40);
-    }
-    
-    .pointget__cards .arrow-line-2 {
-        top: 61%;
-        height: rem(40);
+
+    /* ======== 交換用のカード（特殊調整） ======== */
+    .pointget-card--exchange:not(:first-of-type):not(:last-of-type) {
+        position: relative;
+
+        &::before {
+            top: 30.5%;
+        }
+
+        &::after {
+            top: 59%;
+        }
     }
 }
