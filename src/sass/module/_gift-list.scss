@@ -77,15 +77,12 @@
 
     .giftlist-card__points {
         position: absolute;
-        top: 0;
-        right: max(0px, 50% - min(50vw, 105px));
+        top: rem(-7);
+        left:rem(18);
         background-color: #e74c3c;
         color: white;
         font-size: rem(13);
         padding: rem(2) rem(5);
-        @include mq(md) {
-            right: max(0px, 50% - min(34vw, 76px));
-            }
     }
     
     .giftlist-card__image {
@@ -165,7 +162,6 @@
         background-color: #06C755;
         color: white;
         text-align: center;
-        padding: rem(10);
         text-decoration: none;
         border-radius: rem(4);
         font-weight: bold;
@@ -178,10 +174,16 @@
         text-decoration: none;
         color: white;
         display: block;
+        padding: rem(10);
     }
-    
     .giftlist-card__btn:hover {
         background-color: #27ae60;
+    }
+    .giftlist-card__btn--special {
+        background-color: #C80607;
+    }
+    .giftlist-card__btn--special:hover {
+        background-color: #870b0b!important;
     }
     
     /* 閉じるボタン */

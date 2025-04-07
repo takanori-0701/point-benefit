@@ -1,6 +1,115 @@
 @use "global" as *;
 
+/* Q&Aコンポーネント */
+.point-qa {
+    width: 100%;
+  }
+  
+  .point-qa__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .point-qa__list {
+    width: 100%;
+  }
+  
+  .point-qa__item {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  
+  .point-qa__item:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 質問部分のスタイル */
+  .point-qa__question {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+  }
+  
+  .point-qa__question::-webkit-details-marker {
+    display: none;
+  }
+  
+  .point-qa__question-mark {
+    color: $tytle;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
+    min-width: 24px;
+  }
+  
+  .point-qa__question-text {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .point-qa__toggle-icon {
+    margin-left: 15px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* プラスアイコンの代わりに三角形アイコンを使用 */
+  .point-qa__toggle-icon img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* 開いた状態のアイコン回転 */
+  .point-qa__item[open] .point-qa__toggle-icon img {
+    transform: rotate(180deg);
+  }
+  
+  /* 回答部分のスタイル */
+  .point-qa__answer-container {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  /* トグルアイコンのアニメーション */
+  .point-qa__toggle-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .point-qa__toggle-icon.open {
+    transform: rotate(180deg);
+  }
+  
+  .point-qa__item[open] .point-qa__answer-container {
+    height: auto;
+    opacity: 1;
+  }
+  
+  .point-qa__answer-box {
+    padding: rem(20) rem(20) rem(20) rem(20); 
+    background-color: #cacaca;
+    display: flex;
+  }
+  
+  .point-qa__answer-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  
+  /* アニメーション用のクラス */
+  .point-qa__answer-container--animating {
+    overflow: hidden;
+  }
 
+  
 .point-qa {
     padding: rem(75) 0;
     background-color: #f2f2f2;
@@ -11,155 +120,136 @@
 
 }
 
-
-/* Q&Aリスト */
-.qa-list {
-width: 100%;
-margin-top: rem(35);
-}
-
-/* Q&A項目 */
-.qa-item {
-border-bottom: rem(1) solid #e0e0e0;
-margin-bottom: 0;
-}
-
-/* Q&A項目のサマリー（質問部分） */
-.qa-item__summary {
-display: flex;
-align-items: center;
-padding: rem(20) 0;
-cursor: pointer;
-position: relative;
-list-style: none;
-}
-
-/* サマリーがクリックされたときのアウトラインを消す */
-.qa-item__summary::-webkit-details-marker {
-display: none;
-}
-
-/* Qマーク */
-.qa-item__q-mark {
-color: $tytle;
-font-size: rem(24);
-font-weight: bold;
-margin-right: rem(15);
-min-width: rem(24);
-}
-
-/* 質問テキスト */
-.qa-item__question {
-flex-grow: 1;
-font-size: rem(18);
-font-weight: $normal;
-color: #333;
-}
-
-/* トグルアイコン（プラス/マイナス） */
-.qa-item__toggle-icon {
-position: relative;
-width: rem(24);
-height: rem(24);
-margin-left: rem(15);
-}
-
-/* プラスアイコン（横線） */
-.qa-item__plus {
-position: absolute;
-top: 50%;
-left: 0;
-width: rem(24);
-height: rem(2);
-background-color: #ccc;
-transform: translateY(-50%);
-}
-
-/* プラスアイコン（縦線） */
-.qa-item__plus::after {
-content: '';
-position: absolute;
-top: 50%;
-left: 50%;
-width: rem(2);
-height: rem(24);
-background-color: #ccc;
-transform: translate(-50%, -50%);
-transition: transform 0.3s ease;
-}
-
-/* 開いた状態のプラスアイコン（縦線を回転させて非表示に） */
-.qa-item[open] .qa-item__plus::after {
-transform: translate(-50%, -50%) rotate(90deg);
-opacity: 0;
-}
-
-/* 回答コンテンツ */
-.qa-item__content {
-padding: 0 0 rem(20) rem(39); /* Qマークの幅+マージンに合わせる */
-animation: slideDown 0.3s ease-out;
-}
-
-/* 回答ボックス */
-.qa-item__answer-box {
-display: flex;
-align-items: flex-start;
-}
-
-/* Aマーク */
-.qa-item__a-mark {
-color: #333;
-font-size: rem(24);
-font-weight: bold;
-margin-right: rem(15);
-min-width: rem(24);
-}
-
-/* 回答テキスト */
-.qa-item__answer-text {
-flex-grow: 1;
-font-size: rem(16);
-line-height: 1.8;
-color: #666;
-}
-
-/* アニメーション */
-@keyframes slideDown {
-from {
+.point-qa__plus-icon {
+    position: relative;
+    width: rem(20);
+    height: rem(20);
+    display: block;
+  }
+  
+  .point-qa__plus-icon::before,
+  .point-qa__plus-icon::after {
+    content: "";
+    position: absolute;
+    background-color: #999;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* 横線 */
+  .point-qa__plus-icon::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+  }
+  
+  /* 縦線 */
+  .point-qa__plus-icon::after {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+  
+  /* 開いた状態の縦線（回転して非表示） */
+  .point-qa__item[open] .point-qa__plus-icon::after {
+    transform: translateX(-50%) rotate(90deg);
     opacity: 0;
-    transform: translateY(-10px);
-}
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
+  }
+  
+  /* 開いた状態の横線（マイナスに変化） */
+  .point-qa__item[open] .point-qa__plus-icon::before {
+    background-color: $tytle;
+  }
+
+
+  
+  .point-qa__answer-container {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  /* トグルアイコンのアニメーション */
+  .point-qa__toggle-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .point-qa__toggle-icon.open {
+    transform: rotate(180deg);
+  }
+  
+
+  /* トグルアイコンのスタイルを修正・追加 */
+.point-qa__toggle-icon {
+  margin-left: 15px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 以下を追加 */
+  width: rem(20);
+  height: rem(20);
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-.qa-section__title {
-    font-size: rem(28);
+/* 開いた状態のトグルアイコンのスタイルを強化 */
+.point-qa__toggle-icon.open,
+.point-qa__item[open] .point-qa__toggle-icon {
+  transform: rotate(180deg);
 }
 
-.qa-item__summary {
-    padding: rem(15) 0;
+/* プラスアイコンのスタイルを確実に適用 */
+.point-qa__plus-icon {
+  position: relative;
+  width: rem(20);
+  height: rem(20);
+  display: block;
 }
 
-.qa-item__q-mark,
-.qa-item__a-mark {
-    font-size: rem(20);
-    min-width: rem(20);
+/* プラスアイコンの横線と縦線が確実に表示されるように */
+.point-qa__plus-icon::before,
+.point-qa__plus-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #999;
+  transition: transform 0.3s ease-in-out;
 }
 
-.qa-item__question {
-    font-size: rem(16);
+/* 横線 */
+.point-qa__plus-icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
 }
 
-.qa-item__content {
-    padding: 0 0 rem(15) rem(35);
+/* 縦線 */
+.point-qa__plus-icon::after {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
 }
 
-.qa-item__answer-text {
-    font-size: rem(14);
+/* 開いた状態の縦線（回転して非表示） */
+.point-qa__item[open] .point-qa__plus-icon::after,
+.point-qa__toggle-icon.open .point-qa__plus-icon::after {
+  transform: translateX(-50%) rotate(90deg);
+  opacity: 0;
 }
+
+/* 開いた状態の横線の色変更 */
+.point-qa__item[open] .point-qa__plus-icon::before,
+.point-qa__toggle-icon.open .point-qa__plus-icon::before {
+  background-color: $tytle;
+}
+
+/* アニメーション中のスタイル */
+.point-qa__answer-container--animating {
+  overflow: hidden;
 }

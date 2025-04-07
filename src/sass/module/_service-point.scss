@@ -10,6 +10,9 @@
     gap: rem(40);
     margin-top: rem(40);
     place-items: center;
+    // @media (max-width: 1180px) {
+    //     grid-template-columns: repeat(1, 1fr);
+    // }
     @include mq(md) {
         grid-template-columns: repeat(3, 1fr);
         gap: rem(20);

@@ -1,7 +1,9 @@
 @use "global" as *;
 
 .common-btn2 {
-    width: rem(340);
+    // width: rem(340);
+    width: 100%;
+    max-width: rem(340);
 }
 
 .common-btn2__text {
